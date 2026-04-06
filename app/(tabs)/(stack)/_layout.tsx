@@ -1,4 +1,4 @@
-import { stackScreens } from "@/constants/stack-screens.constant";
+import { stackScreens } from "@/constants";
 import { Stack } from "expo-router";
 
 const Stacklayout = () => {
@@ -11,13 +11,13 @@ const Stacklayout = () => {
         },
       }}
     >
-      {stackScreens.map((stackScreen) => {
+      {stackScreens.map((stack) => {
         return (
           <Stack.Screen
-            key={stackScreen.href}
-            name={stackScreen.href}
+            key={stack.href}
+            name={stack.href}
             options={{
-              title: stackScreen.title,
+              title: stack.title,
             }}
           />
         );
